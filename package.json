@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^2.1.4",
+    "lodash": "*",
+    "react": "*",
+    "react-addons-css-transition-group": "*",
+    "reactify": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "extract-text-webpack-plugin": "0.8.2",
+    "gulp": "3.9.1",
+    "gulp-concat": "2.6.0",
+    "gulp-uglify": "1.5.3",
+    "gulp-webpack": "1.5.0",
+    "webpack": "1.12.14",
+
+    "babel-core": "6.7.6",
+    "babel-loader": "6.2.4",
+    "babel-preset-react": "6.5.0",
+    "react-tools": "0.13.3",
+    "file-loader": "0.8.5",
+    "url-loader": "0.5.7",
+    "sass-loader": "2.0.1",
+    "css-loader": "0.14.5",
+    "style-loader": "0.12.4",
+
+    "node-sass": "*"
+  }
+}
