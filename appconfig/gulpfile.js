@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     gulpWebpack = require('gulp-webpack'),
     webpack = require('webpack'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
-    sourceFile = sBasePath + '/app/html/home-screen.jsx',
+    sourceFile = sBasePath + '/app/html/start.jsx',
     destFolder = sBasePath + '/appbuild',
     _ = require('lodash');
 

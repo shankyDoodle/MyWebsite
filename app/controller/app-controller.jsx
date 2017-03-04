@@ -1,8 +1,10 @@
 var React = require("react");
-var EventBus = require('../../libraries/eventdispatcher/EventDispatcher');
-
 var _ = require('lodash');
 
+var HeaderToolbarView = require("../view/header-toolbar-view.jsx").view;
+var HomeLowerPanelView = require("../view/home-lower-panel").view;
+
+var aToolbarOptions = require("./../store/mock/constant-data-toolbar-option-list");
 
 var Events = {};
 
@@ -10,7 +12,6 @@ var ApplicationController = React.createClass({
     propTypes: {
         store: React.PropTypes.object
     },
-
 
     /*componentWillMount: function () {
         this.setState({
@@ -43,12 +44,18 @@ var ApplicationController = React.createClass({
     },
 */
 
-    render: function () {
+    getMainBodyView: function () {
+        return(<HomeLowerPanelView />);
+    },
 
+    render: function () {
 
         return (
             <div className="wrapperMain">
-                Hello
+                <HeaderToolbarView toolbarOptions={aToolbarOptions}/>
+                <div className="mainBody">
+                    {this.getMainBodyView()}
+                </div>
             </div>);
     }
 });

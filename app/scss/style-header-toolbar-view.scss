@@ -1,0 +1,38 @@
+.headerToolbarContainer{
+  height: 10%;
+  background: #fff;
+  box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.42);
+
+  .nameContainer {
+    font-size: 20px;
+    position: absolute;
+    top: 3%;
+    left: 4%;
+    font-weight: bold;
+  }
+
+  .toolbarOptionsContainer {
+    position: absolute;
+    left: 60%;
+    top: 4%;
+  }
+
+  .headerTool {
+    float: left;
+    margin: 3px 6px;
+    font-size: 11px;
+    font-weight: 600;
+    opacity: .5;
+    cursor: pointer;
+
+    &.selected{
+      transition: all ease .2s;
+      opacity: 1;
+    }
+
+    &:hover{
+      transition: all ease .2s;
+      opacity: 1;
+    }
+  }
+}
