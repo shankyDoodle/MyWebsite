@@ -3,6 +3,9 @@
  */
 var _ = require('lodash');
 
+var PortfolioProps = require("./model/portfolio-props");
+
+
 var MicroEvent = require('../../libraries/microevent/MicroEvent.js');
 
 var PortfolioStore = (function () {
@@ -12,11 +15,16 @@ var PortfolioStore = (function () {
         PortfolioStore.trigger('portfolio-change');
     };
 
+    var _handleHeaderViewToggleClicked = function () {
+        var bIsHeaderViewExpanded = PortfolioProps.getIsHeaderViewExpanded();
+        PortfolioProps.setIsHeaderViewExpanded(!bIsHeaderViewExpanded);
+        _triggerChange();
+    };
+
     //************************************* Public API's **********************************************//
     return {
-        handleConcatenatedAttributeExpressionChanged: function (sAttributeId, sValue, sSectionId, sExpressionId) {
-            _handleConcatenatedAttributeExpressionChanged(sAttributeId, sValue, sSectionId, sExpressionId);
-            _triggerChange();
+        handleHeaderViewToggleClicked: function () {
+            _handleHeaderViewToggleClicked();
         }
     }
 })();

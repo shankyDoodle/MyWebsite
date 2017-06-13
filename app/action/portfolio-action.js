@@ -5,11 +5,17 @@ var _ = require('lodash');
 
 var eventBus = require('../../libraries/eventdispatcher/EventDispatcher');
 
-// var ActionItemViewEvent = require('../../../../../viewlibraries/actionitemview/action-item-view').event;
+var HomeInformationViewEvents = require('../view/header-information-view').events;
+
+var PortfolioStore = require("../store/portfolio-store");
 
 var PortfolioAction = (function () {
 
     var oEventHandler = {};
+
+    var handleHeaderViewToggleClicked = function () {
+        PortfolioStore.handleHeaderViewToggleClicked();
+    };
 
     /*
      * Can not directly set "oEventHandler.ViewEventName.EventName = Handler" directly in the oEventHandler Object,
@@ -19,7 +25,7 @@ var PortfolioAction = (function () {
     var initiateEventHandler = function () {
         var _setEvent = _.set.bind(this, oEventHandler);
 
-        // _setEvent(ActionItemViewEvent.CONTENT_ITEM_EVENT_HANDLER, handleActionItemClicked);
+        _setEvent(HomeInformationViewEvents.HEADER_VIEW_TOGGLE_CLICKED, handleHeaderViewToggleClicked);
     }.call(this);
 
     return {

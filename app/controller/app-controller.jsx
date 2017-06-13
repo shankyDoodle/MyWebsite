@@ -2,6 +2,7 @@ var React = require("react");
 var _ = require('lodash');
 
 var HeaderToolbarView = require("../view/header-toolbar-view.jsx").view;
+var HeaderInformationView = require("../view/header-information-view").view;
 var HomeLowerPanelView = require("../view/home-lower-panel").view;
 
 var aToolbarOptions = require("./../store/mock/constant-data-toolbar-option-list");
@@ -53,6 +54,7 @@ var ApplicationController = React.createClass({
         return (
             <div className="wrapperMain">
                 <HeaderToolbarView toolbarOptions={aToolbarOptions}/>
+                <HeaderInformationView />
                 <div className="mainBody">
                     {this.getMainBodyView()}
                 </div>
