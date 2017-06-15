@@ -17,11 +17,6 @@ var PortfolioAction = (function () {
         PortfolioStore.handleHeaderViewToggleClicked();
     };
 
-    /*
-     * Can not directly set "oEventHandler.ViewEventName.EventName = Handler" directly in the oEventHandler Object,
-     * So Using lodash API _.set(Object, key, value) we bounded oEventHandler so no need to pass oEventHandler object always
-     * Then calling the bounded API and passing Event as key and handler as value
-     */
     var initiateEventHandler = function () {
         var _setEvent = _.set.bind(this, oEventHandler);
 

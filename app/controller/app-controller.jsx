@@ -54,7 +54,7 @@ var ApplicationController = React.createClass({
         return (
             <div className="wrapperMain">
                 <HeaderToolbarView toolbarOptions={aToolbarOptions}/>
-                <HeaderInformationView />
+                {/*<HeaderInformationView />*/}
                 <div className="mainBody">
                     {this.getMainBodyView()}
                 </div>
