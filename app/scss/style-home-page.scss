@@ -1,0 +1,219 @@
+@import "mixin";
+
+$spider-size: 100px;
+$leg-size: 40px;
+
+.homePageContainer{
+
+  .homeLeftBlock{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 90%;
+
+    .introductorySection{
+      font-size: 60px !important;
+      color: #fff;
+      line-height: 60px;
+      margin: 0;
+      font-family: monospace;
+      font-weight: normal;
+      cursor: context-menu;
+      float: left;
+      width: 100%;
+
+      .character_shake{
+        float: left;
+        white-space: pre;
+        &:hover{
+          color: #08fdd8;
+          animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      &::before{
+        content: "<h1>";
+        font-size: 14px;
+        font-style: italic;
+        font-family: cursive;
+        color: #808080;
+        position: absolute;
+        top: -35px;
+        left: 0;
+      }
+
+      &::after{
+        content: "</h1>";
+        font-size: 14px;
+        font-style: italic;
+        font-family: cursive;
+        color: #808080;
+        position: absolute;
+        bottom: 10px;
+        right: 45px;
+      }
+    }
+
+    .introductorySectionBottom {
+      color: #808080;
+      font-size: 15px;
+      margin-top: 5px;
+      font-family: monospace;
+      float: left;
+    }
+  }
+
+  .homeRightBlock{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 40%;
+    height: 90%;
+
+    /*&:hover .spider {
+      top: -120%;
+    }*/
+
+    .spider {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      left: 30%;
+      transition: 1s ease-in-out;
+      animation: swing 2s infinite;
+      transform-origin: top;
+    }
+
+    .spiderweb {
+      @include size(2px, 200px);
+      margin-left: $spider-size / 2 - 1px;
+      background-color: rgba(black, 0.7);
+    }
+
+    .body {
+      @include size($spider-size, $spider-size * 0.8);
+      position: relative;
+      border-radius: 50%;
+      background-color: #08fdd8;
+    }
+
+    .eye {
+      @include size($spider-size / 3);
+      position: absolute;
+      bottom: $spider-size / 5;
+      background-color: #fc0b56;
+      border-radius: 50%;
+
+      &:after {
+        @include size($spider-size / 15);
+        content: "";
+        display: block;
+        margin: 55%;
+        background-color: #08fdd8;
+        border-radius: 50px;
+        animation: look 8s infinite;
+      }
+
+      &.left {
+        left: $spider-size / 7;
+      }
+
+      &.right {
+        right: $spider-size / 7;
+      }
+    }
+
+    .legs {
+      position: absolute;
+      bottom: -10%;
+      z-index: -1;
+
+      &.left {
+        left: -70%;
+      }
+
+      &.right {
+        right: -60%;
+      }
+    }
+
+    .leg {
+      @include size($leg-size * 2, $leg-size);
+      margin-top: -$leg-size / 2;
+      border: 5px solid transparent;
+      border-top-color: #fc0b56;
+      border-radius: 50%/#{$leg-size} $leg-size 0 0;
+    }
+
+    @for $i from 1 through 3 {
+      .legs.left .leg:nth-child(#{$i}) {
+        transform: rotate(40deg - $i * 30deg);
+        margin-left: $i * 10px;
+      }
+
+      .legs.right .leg:nth-child(#{$i}) {
+        transform: rotate(-40deg + $i * 30deg);
+        margin-left: $i * -10px;
+      }
+    }
+  }
+}
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+
+@keyframes swing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes look {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(-110%);
+  }
+  95% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

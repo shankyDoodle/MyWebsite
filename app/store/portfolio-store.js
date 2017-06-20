@@ -16,8 +16,8 @@ var PortfolioStore = (function () {
     };
 
     var _handleHeaderViewToggleClicked = function () {
-        var bIsHeaderViewExpanded = PortfolioProps.getIsHeaderViewExpanded();
-        PortfolioProps.setIsHeaderViewExpanded(!bIsHeaderViewExpanded);
+        var bIsHeaderViewExpanded = PortfolioProps.getCurrentPageContext();
+        PortfolioProps.setCurrentPageContext(!bIsHeaderViewExpanded);
         _triggerChange();
     };
 
@@ -25,7 +25,11 @@ var PortfolioStore = (function () {
     return {
         handleHeaderViewToggleClicked: function () {
             _handleHeaderViewToggleClicked();
-        }
+        },
+
+        getCurrentPageContext: function () {
+            return PortfolioProps.getCurrentPageContext();
+        },
     }
 })();
 

@@ -1,20 +1,20 @@
-var HomeScreenProps = (function () {
+var PortfolioProps = (function () {
 
-    var bIsHeaderViewExpanded = true;
+    var sCurrentPageContext = "home";
 
     return {
-        getIsHeaderViewExpanded: function () {
-            return bIsHeaderViewExpanded;
+        getCurrentPageContext: function () {
+            return sCurrentPageContext;
         },
 
-        setIsHeaderViewExpanded: function (bVal) {
-            bIsHeaderViewExpanded = oMenu;
+        setCurrentPageContext: function (sContext) {
+            sCurrentPageContext = sContext;
         },
 
     }
 })();
 
-module.exports = HomeScreenProps;
+module.exports = PortfolioProps;
 
 
 
