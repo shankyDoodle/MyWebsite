@@ -1,3 +1,5 @@
+@import "mixin";
+
 html, body{
   height: 100%;
 }
@@ -19,6 +21,19 @@ html, body{
       left: 0;
       right: 0;
       bottom: 0;
+    }
+
+    .tags{
+      @include tagPseudoElement();
+      left: 100px;
+
+      &.upperTags{
+        top: 38px;
+      }
+
+      &.lowerTags{
+        bottom:38px;
+      }
     }
   }
 }

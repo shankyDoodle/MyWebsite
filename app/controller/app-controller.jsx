@@ -13,39 +13,37 @@ var ApplicationController = React.createClass({
     },
 
     /*componentWillMount: function () {
-        this.setState({
-            data: this.getStore().initialize().data,
-            clickedPieChart: this.getStore().initialize().clickedPieChart
-        });
-    },
+     this.setState({
+     data: this.getStore().initialize().data,
+     clickedPieChart: this.getStore().initialize().clickedPieChart
+     });
+     },
 
-    //@UnBind: store with state
-    componentWillUnmount: function () {
-        this.getStore().unbind('change', this.stateChanged);
-        this.props.action.deRegisterEvent();
-    },
+     //@UnBind: store with state
+     componentWillUnmount: function () {
+     this.getStore().unbind('change', this.stateChanged);
+     this.props.action.deRegisterEvent();
+     },
 
-    //@Bind: Store with state
-    componentDidMount: function () {
-        this.getStore().bind('change', this.stateChanged);
-        this.props.action.registerEvent();
-    },
+     //@Bind: Store with state
+     componentDidMount: function () {
+     this.getStore().bind('change', this.stateChanged);
+     this.props.action.registerEvent();
+     },
 
-    stateChanged: function () {
-        this.setState({
-            data: this.getStore().getSystemItemList(),
-            clickedPieChart: this.getStore().getClickedPieChart()
-        });
-    },
-*/
+     stateChanged: function () {
+     this.setState({
+     data: this.getStore().getSystemItemList(),
+     clickedPieChart: this.getStore().getClickedPieChart()
+     });
+     },
+     */
     getStore: function () {
         return this.props.store;
     },
 
-    getCurrentPageView: function () {
-        var sCurrentPageContext = this.getStore().getCurrentPageContext();
-
-        switch(sCurrentPageContext){
+    getCurrentPageView: function (sCurrentPageContext) {
+        switch (sCurrentPageContext) {
             case "home":
                 return <HomePage />;
         }
@@ -162,14 +160,24 @@ var ApplicationController = React.createClass({
             },
             "retina_detect": true
         };
-        var oCurrentPageView = this.getCurrentPageView();
         var sCurrentPageContext = this.getStore().getCurrentPageContext();
+        var oCurrentPageView = this.getCurrentPageView(sCurrentPageContext);
         return (
             <div className="wrapperMain">
                 <LeftToolbarPanel currentPageContext={sCurrentPageContext}/>
                 <div className="rightPanelContainer">
                     <div className="particleCanvasContainer">
                         <Particles params={oParam}/>
+                    </div>
+                    <div className="tags upperTags">
+                        {"<html>"}
+                        <br/>
+                        {"      <body>"}
+                    </div>
+                    <div className="tags lowerTags">
+                        {"      </body>"}
+                        <br/>
+                        {"</html>"}
                     </div>
                     {oCurrentPageView}
                 </div>

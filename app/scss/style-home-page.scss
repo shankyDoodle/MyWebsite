@@ -31,29 +31,20 @@ $leg-size: 40px;
         white-space: pre;
         &:hover{
           color: #08fdd8;
-          animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-          transform: translate3d(0, 0, 0);
+          @include shakeHorizontally();
         }
       }
 
       &::before{
+        @include tagPseudoElement();
         content: "<h1>";
-        font-size: 14px;
-        font-style: italic;
-        font-family: cursive;
-        color: #808080;
-        position: absolute;
         top: -35px;
         left: 0;
       }
 
       &::after{
+        @include tagPseudoElement();
         content: "</h1>";
-        font-size: 14px;
-        font-style: italic;
-        font-family: cursive;
-        color: #808080;
-        position: absolute;
         bottom: 10px;
         right: 45px;
       }
@@ -168,23 +159,7 @@ $leg-size: 40px;
 }
 
 
-@keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
 
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
 
 
 

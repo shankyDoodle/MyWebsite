@@ -2,3 +2,60 @@
   width: $width;
   height: $height;
 }
+
+@font-face {
+  font-family: "BetterTogether";
+  src: url('./fonts/Better Together Demo.ttf');
+}
+
+@font-face {
+  font-family: "AngelTears";
+  src: url('./fonts/Angel Tears Neue.ttf');
+}
+
+@font-face {
+  font-family: "Crushed";
+  src: url('./fonts/crushed.ttf');
+}
+
+@font-face {
+  font-family: "MonaShark";
+  src: url('./fonts/Mona Shark.otf');
+}
+
+@font-face {
+  font-family: "SweetSensation";
+  src: url('./fonts/Sweet Sensations.ttf');
+}
+
+@mixin tagPseudoElement(){
+  white-space: pre;
+  font-size: 14px;
+  font-style: italic;
+  font-family: "Adobe Kaiti Std R";
+  color: #616161;
+  position: absolute;
+}
+
+@mixin shakeHorizontally(){
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
