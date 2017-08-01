@@ -1,0 +1,58 @@
+@import "mixin";
+
+.pageLeftBlock{
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 40%;
+  max-height: 90%;
+}
+
+.pageRightBlock{
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 40%;
+  height: 90%;
+}
+
+.shakeWithH1{
+  font-size: 60px;
+  color: #fff;
+  line-height: 60px;
+  margin: 0;
+  font-family: monospace;
+  font-weight: normal;
+  cursor: context-menu;
+  float: left;
+  width: 100%;
+
+  .character_shake{
+    float: left;
+    white-space: pre;
+    &:hover{
+      color: #08fdd8;
+      @include shakeHorizontally();
+    }
+  }
+
+  &::before{
+    @include tagPseudoElement();
+    content: "<h1>";
+    top: -35px;
+    left: 0;
+  }
+
+  &::after{
+    @include tagPseudoElement();
+    content: "</h1>";
+    bottom: 10px;
+    right: 45px;
+  }
+}

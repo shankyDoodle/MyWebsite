@@ -12,19 +12,18 @@ var PortfolioStore = (function () {
 
     //************************************* Private API's ************-**********************************//
     var _triggerChange = function () {
-        PortfolioStore.trigger('portfolio-change');
+        PortfolioStore.trigger('change');
     };
 
-    var _handleHeaderViewToggleClicked = function () {
-        var bIsHeaderViewExpanded = PortfolioProps.getCurrentPageContext();
-        PortfolioProps.setCurrentPageContext(!bIsHeaderViewExpanded);
+    var _handleScreenChange = function (sClickedItem) {
+        PortfolioProps.setCurrentPageContext(sClickedItem);
         _triggerChange();
     };
 
     //************************************* Public API's **********************************************//
     return {
-        handleHeaderViewToggleClicked: function () {
-            _handleHeaderViewToggleClicked();
+        handleScreenChange: function (sClickedItem) {
+            _handleScreenChange(sClickedItem);
         },
 
         getCurrentPageContext: function () {

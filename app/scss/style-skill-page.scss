@@ -1,0 +1,36 @@
+@import "mixin";
+
+.skillPageContainer{
+
+  .skillLeftBlock{
+
+    .informationBlock{
+
+      .headerInformation{
+        &.shakeWithH1{
+          font-size: 40px;
+          white-space: pre;
+          color: #08fdd8;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+
+  .skillRightBlock{
+    padding: 3% 0;
+
+    #myCanvasContainer{
+      #myCanvas{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 90%;
+        height: auto;
+      }
+    }
+  }
+}

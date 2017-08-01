@@ -2,7 +2,8 @@ var React = require("react");
 var _ = require('lodash');
 var Particles = require('react-particles-js').Particles;
 
-var HomePage = require('../view/home-page').view;
+var HomePage = require('../view/home-page-view').view;
+var SkillPage = require('../view/skill-page').view;
 var LeftToolbarPanel = require('../view/left-toolbar-panel').view;
 
 var Events = {};
@@ -12,40 +13,51 @@ var ApplicationController = React.createClass({
         store: React.PropTypes.object
     },
 
+    getInitialState: function () {
+        return {
+            store: this.props.store,
+        };
+    },
+
     /*componentWillMount: function () {
-     this.setState({
-     data: this.getStore().initialize().data,
-     clickedPieChart: this.getStore().initialize().clickedPieChart
-     });
-     },
+        this.setState({
+            store: this.props.store
+        });
+    },*/
 
-     //@UnBind: store with state
-     componentWillUnmount: function () {
-     this.getStore().unbind('change', this.stateChanged);
-     this.props.action.deRegisterEvent();
-     },
+    //@UnBind: store with state
+    componentWillUnmount: function () {
+        this.getStore().unbind('change', this.appStateChanged);
+        this.props.action.deRegisterEvent();
+    },
 
-     //@Bind: Store with state
-     componentDidMount: function () {
-     this.getStore().bind('change', this.stateChanged);
-     this.props.action.registerEvent();
-     },
+    //@Bind: Store with state
+    componentDidMount: function () {
+        this.getStore().bind('change', this.appStateChanged);
+        this.props.action.registerEvent();
+    },
 
-     stateChanged: function () {
-     this.setState({
-     data: this.getStore().getSystemItemList(),
-     clickedPieChart: this.getStore().getClickedPieChart()
-     });
-     },
-     */
+    //@set: state
+    appStateChanged: function () {
+        this.setState({
+            store: this.props.store,
+        });
+    },
+
     getStore: function () {
-        return this.props.store;
+        return this.state.store;
     },
 
     getCurrentPageView: function (sCurrentPageContext) {
         switch (sCurrentPageContext) {
             case "home":
                 return <HomePage />;
+
+            case "about":
+                break;
+
+            case "skill":
+                return <SkillPage />
         }
     },
 
@@ -53,14 +65,14 @@ var ApplicationController = React.createClass({
         var oParam = {
             "particles": {
                 "number": {
-                    "value": 90,
+                    "value": 80,
                     "density": {
                         "enable": true,
                         "value_area": 800
                     }
                 },
                 "color": {
-                    "value": "#9f9f9f"
+                    "value": "#8c8c8c"
                 },
                 "shape": {
                     "type": "circle",

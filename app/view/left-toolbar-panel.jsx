@@ -4,7 +4,7 @@ var _ = require('lodash');
 var EventBus = require('../../libraries/eventdispatcher/EventDispatcher');
 
 var Events = {
-    HEADER_VIEW_TOGGLE_CLICKED: "header_view_toggle_clicked"
+    CHANGE_SCREEN: "change_screen"
 };
 
 var HeaderInformationView = React.createClass({
@@ -13,7 +13,7 @@ var HeaderInformationView = React.createClass({
     },
 
     handleToolbarIconClicked: function (sClickedItem) {
-        // EventBus.dispatch(Events.HEADER_VIEW_TOGGLE_CLICKED);
+        EventBus.dispatch(Events.CHANGE_SCREEN, this, sClickedItem);
     },
 
     handleSocialMediaIconClicked: function () {

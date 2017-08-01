@@ -7,18 +7,21 @@ var eventBus = require('../../libraries/eventdispatcher/EventDispatcher');
 
 var PortfolioStore = require("../store/portfolio-store");
 
+var LeftToolbarPanelViewEvents = require("../view/left-toolbar-panel").events;
+
+
 var PortfolioAction = (function () {
 
     var oEventHandler = {};
 
-    var handleHeaderViewToggleClicked = function () {
-        PortfolioStore.handleHeaderViewToggleClicked();
+    var handleScreenChange = function (oContext, sClickedItem) {
+        PortfolioStore.handleScreenChange(sClickedItem);
     };
 
     var initiateEventHandler = function () {
         var _setEvent = _.set.bind(this, oEventHandler);
 
-        // _setEvent(HomeInformationViewEvents.HEADER_VIEW_TOGGLE_CLICKED, handleHeaderViewToggleClicked);
+        _setEvent(LeftToolbarPanelViewEvents.CHANGE_SCREEN, handleScreenChange);
     }.call(this);
 
     return {

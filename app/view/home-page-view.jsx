@@ -9,10 +9,10 @@ var HomePageView = React.createClass({
     getTextArea: function () {
         var sTextString = "Hi,I'm Shashank,web developer.";
         var aDom = [];
-        _.forEach(sTextString, function (sCharacter) {
-            aDom.push(<div className="character_shake">{sCharacter}</div>);
+        _.forEach(sTextString, function (sCharacter, iIndex) {
+            aDom.push(<div className="character_shake" key={iIndex + sCharacter}>{sCharacter}</div>);
             if (sCharacter == ",") {
-                aDom.push(<br />);
+                aDom.push(<br key={iIndex + sCharacter + "/brTag"}/>);
             }
         });
         return aDom;
@@ -44,13 +44,13 @@ var HomePageView = React.createClass({
         return (
             <div className="homePageContainer">
 
-                <div className="homeLeftBlock">
-                    <div className="introductorySection">
+                <div className="homeLeftBlock pageLeftBlock">
+                    <div className="introductorySection shakeWithH1">
                         {this.getTextArea()}
                     </div>
                     <div className="introductorySectionBottom">Front End Developer | React JS | Artist</div>
                 </div>
-                <div className="homeRightBlock spider">
+                <div className="homeRightBlock spider pageRightBlock">
                     {this.getSpiderView()}
                 </div>
             </div>);

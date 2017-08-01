@@ -16,7 +16,8 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("./images/my-photo.jpg");
+    //logo needs to be placed in below line.
+    //background-image: url("./images/my-photo.jpg");
 
     &::before{
       content: "";
