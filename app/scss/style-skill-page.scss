@@ -14,6 +14,29 @@
           line-height: 40px;
         }
       }
+
+      .bodyInformation{
+        width: 80%;
+        &.shakeWithH1{
+          font-size: 15px;
+          line-height: 15px;
+          white-space: pre;
+
+          &::before{
+            display: none;
+          }
+
+          &::after{
+            display: none;
+          }
+
+          .character_shake{
+            &:hover{
+              color: #ffffff;
+            }
+          }
+        }
+      }
     }
   }
 

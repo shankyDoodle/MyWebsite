@@ -2,7 +2,8 @@ var React = require("react");
 var _ = require('lodash');
 var Particles = require('react-particles-js').Particles;
 
-var HomePage = require('../view/home-page-view').view;
+var HomePage = require('../view/home-page').view;
+var AboutPage = require('../view/about-page').view;
 var SkillPage = require('../view/skill-page').view;
 var LeftToolbarPanel = require('../view/left-toolbar-panel').view;
 
@@ -53,8 +54,8 @@ var ApplicationController = React.createClass({
             case "home":
                 return <HomePage />;
 
-            case "about":
-                break;
+            case "aboutMe":
+                return <AboutPage />;
 
             case "skill":
                 return <SkillPage />
@@ -68,7 +69,7 @@ var ApplicationController = React.createClass({
                     "value": 80,
                     "density": {
                         "enable": true,
-                        "value_area": 800
+                        "value_area": 1024
                     }
                 },
                 "color": {
