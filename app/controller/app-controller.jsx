@@ -5,6 +5,7 @@ var Particles = require('react-particles-js').Particles;
 var HomePage = require('../view/home-page').view;
 var AboutPage = require('../view/about-page').view;
 var SkillPage = require('../view/skill-page').view;
+var ContactPage = require('../view/contact-page').view;
 var LeftToolbarPanel = require('../view/left-toolbar-panel').view;
 
 var Events = {};
@@ -58,7 +59,10 @@ var ApplicationController = React.createClass({
                 return <AboutPage />;
 
             case "skill":
-                return <SkillPage />
+                return <SkillPage />;
+
+            case "contact":
+                return <ContactPage />
         }
     },
 

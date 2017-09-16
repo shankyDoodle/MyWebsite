@@ -5,8 +5,10 @@
     "lodash": "*",
     "react": "*",
     "react-addons-css-transition-group": "*",
+    "react-dom": "*",
+    "react-google-maps": "^8.2.0",
     "reactify": "*",
-    "react-dom": "*"
+    "recompose": "^0.25.0"
   },
   "devDependencies": {
     "babel-core": "6.7.6",

@@ -16,8 +16,25 @@ var HeaderInformationView = React.createClass({
         EventBus.dispatch(Events.CHANGE_SCREEN, this, sClickedItem);
     },
 
-    handleSocialMediaIconClicked: function () {
+    handleSocialMediaIconClicked: function (sButtonContext) {
+        var sUrl = "";
+        switch (sButtonContext){
+            case "facebook":
+                sUrl = "https://www.facebook.com/shashank.kaldate";
+                break;
+            case "linkedIn":
+                sUrl = "https://www.linkedin.com/in/shashank-kaldate-23b6a689/";
+                break;
+            case "twitter":
+                sUrl = "https://twitter.com/shanky4k";
+                break;
+            case "instagram":
+                sUrl = "https://www.instagram.com/shanky.doodle/?hl=en";
+                break;
+        }
 
+        var win = window.open(sUrl);
+        win.focus();
     },
 
     render: function () {
