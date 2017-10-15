@@ -7,6 +7,7 @@
     "react-addons-css-transition-group": "*",
     "react-dom": "*",
     "react-google-maps": "^8.2.0",
+    "react-image-gallery": "^0.8.3",
     "reactify": "*",
     "recompose": "^0.25.0"
   },

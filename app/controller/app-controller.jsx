@@ -6,6 +6,7 @@ var HomePage = require('../view/home-page').view;
 var AboutPage = require('../view/about-page').view;
 var SkillPage = require('../view/skill-page').view;
 var ContactPage = require('../view/contact-page').view;
+var WorkPage = require('../view/work-page').view;
 var LeftToolbarPanel = require('../view/left-toolbar-panel').view;
 
 var Events = {};
@@ -62,7 +63,10 @@ var ApplicationController = React.createClass({
                 return <SkillPage />;
 
             case "contact":
-                return <ContactPage />
+                return <ContactPage />;
+
+            case "work":
+                return <WorkPage />
         }
     },
 
@@ -144,7 +148,7 @@ var ApplicationController = React.createClass({
                         "mode": "grab"
                     },
                     "onclick": {
-                        "enable": true,
+                        "enable": false,
                         "mode": "push"
                     },
                     "resize": true

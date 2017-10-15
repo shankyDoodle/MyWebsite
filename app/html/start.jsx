@@ -4,6 +4,7 @@ var React = require('react');
 var $ = require("jquery");
 window.jQuery = $;
 require('./../../libraries/tagcanvas/tagcanvas.min');
+require("react-image-gallery/styles/css/image-gallery.css") ;
 
 
 var AppController = require('../controller/app-controller.jsx').view;

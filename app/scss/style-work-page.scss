@@ -1,0 +1,45 @@
+.workPageContainer{
+  height: 100%;
+  width:100%;
+
+  .buttonsContainer{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: auto;
+
+    .workButton{
+      float: left;
+      height: 60px;
+      width: auto;
+      min-width: 100px;
+      border: 1px solid #08fdd8;
+      margin: 0 5px;
+      border-radius: 10px;
+      color: #08fdd8;
+      text-align: center;
+      padding: 0 10px;
+      line-height: 60px;
+      font-size: 25px;
+
+      &.technologyButton{
+        font-family: -webkit-pictograph;
+        text-transform: uppercase;
+      }
+
+      &.artButton{
+        font-family: cursive;
+        text-transform: uppercase;
+      }
+
+      &.musicButton{
+        font-family: monospace;
+        text-transform: uppercase;
+        font-style: oblique;
+      }
+    }
+  }
+}

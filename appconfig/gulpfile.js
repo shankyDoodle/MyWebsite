@@ -16,6 +16,8 @@ var aPathsToInclude = [];
 aPathsToInclude.push(sourceFile);
 //Libraries css files
 aPathsToInclude.push(sBasePath + '/node_modules/bootstrap/dist/css/bootstrap.css');
+// aPathsToInclude.push(sBasePath + '/node_modules/react-image-gallery/styles/scss/image-gallery.scss');
+// aPathsToInclude.push(sBasePath + '/node_modules/react-image-gallery/styles/css/image-gallery.css');
 //Custom css files
 aPathsToInclude.push(sBasePath + '/app/**/*.scss');
 aPathsToInclude.push(sBasePath + '/app/**/*.css');
