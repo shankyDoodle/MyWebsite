@@ -1,0 +1,56 @@
+.imageGalleryViewContainer{
+  height: 70%;
+  width: 70%;
+  transform: translateX(20%);
+  position: absolute;
+  top: 80px;
+
+  .image-gallery{
+    height: 100%;
+    width: 100%;
+
+    .image-gallery-content{
+      height: inherit;
+      width: inherit;
+
+      .image-gallery-slide-wrapper{
+        height: inherit;
+        width: inherit;
+
+        .image-gallery-swipe{
+          height: inherit;
+          width: inherit;
+
+          .image-gallery-slides{
+            height: inherit;
+            width: inherit;
+
+            .image-gallery-slide{
+              height: inherit;
+              width: inherit;
+
+              .image-gallery-image{
+                height: inherit;
+                width: inherit;
+                background: #000;
+
+                img{
+                  height: 100%;
+                  width: 100%;
+                  object-fit: contain
+                }
+
+                .video-wrapper {
+                  float: left;
+                  margin-left: 50%;
+                  margin-top: 24%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

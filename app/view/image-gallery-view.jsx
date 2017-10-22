@@ -2,19 +2,24 @@ var React = require("react");
 var _ = require('lodash');
 var ImageGallery = require('react-image-gallery').default;
 
-var test1image = require('../scss/images/Facebook-26-Black.png');
-var CuteDreamGirlWithSpecs = require('../media/CuteDreamGirlWithSpecs.jpg');
-var BanTheFox7DeadlySins = require('../media/BanTheFox7DeadlySins.jpg');
-var BanTheFox7DeadlySins2 = require('../media/BanTheFox7DeadlySins2.png');
-var BatmanInDark = require('../media/BatmanInDark.jpg');
-var BeautifulGirlVector = require('../media/BeautifulGirlVector.jpg');
-var BirdFromCameraBlurrEffect = require('../media/BirdFromCameraBlurrEffect.jpg');
-var DeadpoolHulk = require('../media/DeadpoolHulk.jpg');
-var KakashiSenseiNaruto = require('../media/KakashiSenseiNaruto.jpg');
-var Test2Image = require('../media/preview.jpg');
+/** Art Related Images*/
+const CuteDreamGirlWithSpecs = '../media/CuteDreamGirlWithSpecs.jpg';
+const BanTheFox7DeadlySins = '../media/BanTheFox7DeadlySins.jpg';
+const BatmanInDark = '../media/BatmanInDark.jpg';
+const BeautifulGirlVector = '../media/BeautifulGirlVector.jpg';
+const BirdFromCameraBlurrEffect = '../media/BirdFromCameraBlurrEffect.jpg';
+const DeadpoolHulk = '../media/DeadpoolHulk.jpg';
+const KakashiSenseiNaruto = '../media/KakashiSenseiNaruto.jpg';
 
-const PREFIX_URL = 'https://raw.githubusercontent.com/xiaolin/react-image-gallery/master/static/';
-
+/** Music Related Images*/
+const AbhiMuzMeKahi_Thumb = '../media/AbhiMuzMeKahin_Thumb.png';
+const AbhiMuzMeKahi_Tile = '../media/AbhiMuzMeKahin_Tile.jpg';
+const KrishnaThemeMahabharata_Thumb = '../media/KrishnaThemeMahabharata_Thumb.png';
+const KrishnaThemeMahabharata_Tile = '../media/KrishnaThemeMahabharata_Tile.jpg';
+const MainRahuYaNaRahu_Thumb = '../media/MainRahuYaNaRahu_Thumb.png';
+const MainRahuYaNaRahu_Tile = '../media/MainRahuYaNaRahu_Tile.jpg';
+const Titanic_Thumb = '../media/Titanic_Thumb.png';
+const Titanic_Tile = '../media/Titanic_Tile.jpg';
 
 var ImageGalleryView = React.createClass({
     propTypes: {},
@@ -27,8 +32,8 @@ var ImageGalleryView = React.createClass({
             showBullets: true,
             infinite: true,
             showThumbnails: true,
-            showFullscreenButton: false,
-            showGalleryFullscreenButton: false,
+            showFullscreenButton: true,
+            showGalleryFullscreenButton: true,
             showPlayButton: true,
             showGalleryPlayButton: true,
             showNav: true,
@@ -168,18 +173,11 @@ var ImageGalleryView = React.createClass({
     getItemListForArt: function () {
         return ([
             {
-                original: test1image,
-                thumbnail: test1image,
-                originalClass: 'featured-slide',
-                thumbnailClass: 'featured-thumb',
-                description: 'Imagine like looking at a bird from a camera lens.'
-            },
-            {
                 original: BirdFromCameraBlurrEffect,
                 thumbnail: BirdFromCameraBlurrEffect,
                 originalClass: 'featured-slide',
                 thumbnailClass: 'featured-thumb',
-                description: 'Imagine like looking at a bird from a camera lens.'
+                description: 'Looking at a bird from a camera lens.'
             },
             {
                 original: KakashiSenseiNaruto,
@@ -200,7 +198,7 @@ var ImageGalleryView = React.createClass({
                 thumbnail: CuteDreamGirlWithSpecs,
                 originalClass: 'featured-slide',
                 thumbnailClass: 'featured-thumb',
-                description: 'Imagined this girl in college...'
+                description: 'Dream girl...'
             },
             {
                 original: DeadpoolHulk,
@@ -217,26 +215,62 @@ var ImageGalleryView = React.createClass({
                 description: 'A small try on vector images.'
             },
             {
-                thumbnail: Test2Image,
-                original: Test2Image,
+                thumbnail: BanTheFox7DeadlySins,
+                original: BanTheFox7DeadlySins,
                 originalClass: 'featured-slide',
                 thumbnailClass: 'featured-thumb',
-                embedUrl: 'https://www.youtube.com/watch?v=Rl3ELiPXFRo',
-                description: 'Ban the fox sin from Seven Deadly Sins(Anime)',
+                description: 'Ban the fox sin from Seven Deadly Sins(Anime)'
+            }
+        ]);
+    },
+
+    getItemListForMusic: function () {
+        return ([
+            {
+                thumbnail: KrishnaThemeMahabharata_Thumb,
+                original: KrishnaThemeMahabharata_Tile,
+                originalClass: 'featured-slide',
+                thumbnailClass: 'featured-thumb',
+                description: 'Krishna Theme (Mahabharata)',
+                embedUrl: 'https://www.youtube.com/embed/hyvjIMcroX0',
                 renderItem: this._renderVideo.bind(this)
             },
-            /*{
-             thumbnail: `${PREFIX_URL}4v.jpg`,
-             original: `${PREFIX_URL}4v.jpg`,
-             embedUrl: 'https://www.youtube.com/embed/4pSzhZ76GdM?autoplay=1&showinfo=0',
-             renderItem: this._renderVideo.bind(this)
-             }*/
+            {
+                thumbnail: AbhiMuzMeKahi_Thumb,
+                original: AbhiMuzMeKahi_Tile,
+                originalClass: 'featured-slide',
+                thumbnailClass: 'featured-thumb',
+                description: 'Abhi Muz Me Kahin (Agneepath)-Flute Cover',
+                embedUrl: 'https://www.youtube.com/embed/rk9zN_Bw1hQ',
+                renderItem: this._renderVideo.bind(this)
+            },
+            {
+                thumbnail: MainRahuYaNaRahu_Thumb,
+                original: MainRahuYaNaRahu_Tile,
+                originalClass: 'featured-slide',
+                thumbnailClass: 'featured-thumb',
+                description: 'Mashup - Main Rahoon Ya (Title Song) | Sawaar Loon(Lootera)',
+                embedUrl: 'https://www.youtube.com/embed/TjBpGolobIg',
+                renderItem: this._renderVideo.bind(this)
+            },
+            {
+                thumbnail: Titanic_Thumb,
+                original: Titanic_Tile,
+                originalClass: 'featured-slide',
+                thumbnailClass: 'featured-thumb',
+                description: 'Titanic Flute Cover',
+                embedUrl: 'https://www.youtube.com/embed/oovLNLtk20Q',
+                renderItem: this._renderVideo.bind(this)
+            }
         ]);
     },
 
     render: function () {
-        var aImages = this.getItemListForArt();
+        var bIsArtContext = this.props.context === "art";
+        var aImages = bIsArtContext ? this.getItemListForArt() : this.getItemListForMusic();
 
+        var bShowFullScreenButton = this.state.showFullscreenButton && this.state.showGalleryFullscreenButton && bIsArtContext;
+        var bShowPlayButton = this.state.showPlayButton && this.state.showGalleryPlayButton && bIsArtContext;
         return (
             <div className="imageGalleryViewContainer">
                 <ImageGallery
@@ -251,8 +285,8 @@ var ImageGalleryView = React.createClass({
                     onPlay={this._onPlay.bind(this)}
                     infinite={this.state.infinite}
                     showBullets={this.state.showBullets}
-                    showFullscreenButton={this.state.showFullscreenButton && this.state.showGalleryFullscreenButton}
-                    showPlayButton={this.state.showPlayButton && this.state.showGalleryPlayButton}
+                    showFullscreenButton={bShowFullScreenButton}
+                    showPlayButton={bShowPlayButton}
                     showThumbnails={this.state.showThumbnails}
                     showIndex={this.state.showIndex}
                     showNav={this.state.showNav}

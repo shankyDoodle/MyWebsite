@@ -1,6 +1,6 @@
 var React = require("react");
 var _ = require('lodash');
-var ImageGalleryView =  require('./image-gallery-view').view;
+var ImageGalleryView = require('./image-gallery-view').view;
 
 var WorkPageView = React.createClass({
     propTypes: {},
@@ -20,17 +20,32 @@ var WorkPageView = React.createClass({
 
     getButtonsDom: function () {
         return <div className="buttonsContainer">
-            <div className="workButton technologyButton"
-                 onClick={this.handleWorkButtonClicked.bind(this, "technologyView")}>Technology</div>
+            {/*<div className="workButton technologyButton"
+                 onClick={this.handleWorkButtonClicked.bind(this, "technologyView")}>Technology
+            </div>*/}
             <div className="workButton artButton"
-                 onClick={this.handleWorkButtonClicked.bind(this, "artView")}>Art</div>
+                 onClick={this.handleWorkButtonClicked.bind(this, "artView")}>Art
+            </div>
             <div className="workButton musicButton"
-                 onClick={this.handleWorkButtonClicked.bind(this, "musicView")}>Music</div>
+                 onClick={this.handleWorkButtonClicked.bind(this, "musicView")}>Music
+            </div>
         </div>
     },
 
     getArtViewDom: function () {
-      return <ImageGalleryView />
+        return (
+            <div className="workInnerViewWrapper">
+                <div className="workButton artButton" onClick={this.handleWorkButtonClicked.bind(this, "buttonsView")}>Art</div>
+                <ImageGalleryView context={"art"}/>
+            </div>)
+    },
+
+    getMusicViewDom: function () {
+        return (
+            <div className="workInnerViewWrapper">
+                <div className="workButton musicButton" onClick={this.handleWorkButtonClicked.bind(this, "buttonsView")}>Music</div>
+                <ImageGalleryView context={"music"}/>
+            </div>)
     },
 
     render: function () {
@@ -46,7 +61,7 @@ var WorkPageView = React.createClass({
                 oViewToRender = this.getArtViewDom();
                 break;
             case "musicView":
-                oViewToRender = this.getButtonsDom();
+                oViewToRender = this.getMusicViewDom();
                 break;
         }
 
