@@ -50,8 +50,12 @@ var HomePageView = React.createClass({
                     </div>
                     <div className="introductorySectionBottom">Front End Developer | React JS | Artist</div>
                 </div>
-                <div className="homeRightBlock spider pageRightBlock">
+                {/*<div className="homeRightBlock spider pageRightBlock">
                     {this.getSpiderView()}
+                </div>*/}
+                <div className="homeRightBlock pageRightBlock">
+                    <div className="webContainer"></div>
+                    <div className="logoInsideWeb"></div>
                 </div>
             </div>);
     }

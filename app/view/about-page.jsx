@@ -25,9 +25,9 @@ var AboutPageView = React.createClass({
     },
 
     getBodyText: function () {
-        var sPara1 = "Since past 2 years I am fascinated and I am specialising in front-end development -HTML/CSS/JS, React.Js.",
+        var sPara1 = "Since past 2 years I am specialising in front-end development -HTML/CSS/JS, React.Js.",
             sPara2 = "But I also get my hands dirty on back-end development on rare occasions in JAVA and database technologies.",
-            sPara3 = "I am art enthusiast as well, like to participate in every art form -Music, Drawing, Dance, Acting.";
+            sPara3 = "I am an art enthusiast as well, like to participate in every art form - Music, Drawing, Dance, Acting.";
 
         var oPara1DOM = (<div className="paraWrapper">{this.getWordSeparatedDomArray(sPara1)}</div>);
         var oPara2DOM = (<div className="paraWrapper">{this.getWordSeparatedDomArray(sPara2)}</div>);

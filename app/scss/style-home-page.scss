@@ -109,6 +109,38 @@ $leg-size: 40px;
         margin-left: $i * -10px;
       }
     }
+
+
+
+
+    .webContainer{
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      margin: 5px;
+      background-position: center;
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-image: url("./images/web-300px.png");
+      filter: invert(1);
+    }
+
+    .logoInsideWeb{
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      margin: 5px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("./images/Naruto Filled Colored-50.png");
+
+      float: left;
+      position: absolute;
+      top: 49%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 

@@ -12,14 +12,14 @@
     width: 50px;
     cursor: pointer;
     margin: 5px;
+    border: 1px solid #08fdd8;
     border-radius: 50%;
     background-position: center;
-    background-size: cover;
+    background-size: 30px;
     background-repeat: no-repeat;
-    //logo needs to be placed in below line.
-    //background-image: url("./images/my-photo.jpg");
+    background-image: url("./images/Naruto Filled Colored-50.png");
 
-    &::before{
+    /*&::before{
       content: "";
       display: inherit;
       height: 50px;
@@ -28,7 +28,7 @@
       border-radius: 50%;
       background: #08fdd8;
       opacity: .5;
-    }
+    }*/
   }
 
   .toolbarIconContainer {
