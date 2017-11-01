@@ -1,6 +1,8 @@
 var React = require("react");
 var _ = require('lodash');
 
+var RotatingPyramidView = require('./rotating-pyramid-view').view;
+
 var AboutPageView = React.createClass({
     propTypes: {
         // toolbarOptions: React.PropTypes.array
@@ -36,6 +38,9 @@ var AboutPageView = React.createClass({
     },
 
     getPyramidView: function () {
+        return(
+            <RotatingPyramidView />
+        )
         return (
             <div className="pyramidContainer">
                 <div className="jsPlane"></div>

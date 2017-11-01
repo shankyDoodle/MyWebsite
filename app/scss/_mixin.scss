@@ -59,3 +59,14 @@
     transform: translate3d(4px, 0, 0);
   }
 }
+
+@mixin pyramidSidePseudoElement(){
+  position: absolute;
+  bottom: -200px;
+  left: -45px;
+  height: 100px;
+  width: 100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

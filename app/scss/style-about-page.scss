@@ -44,59 +44,6 @@ $speed: 5;
 
   .aboutRightBlock {
 
-    .pyramidContainer {
-      width: 400px;
-      height: 400px;
-      margin: 0 auto;
-      position: relative;
-      perspective: 300px;
-      perspective-origin: 50% 40%;
-
-      .side{
-        position: absolute;
-        left: 140px;
-        top: 150px;
-        width: 0;
-        height: 0;
-        border-left: 60px solid transparent;
-        border-right: 60px solid transparent;
-        border-bottom: 120px solid #ccc;
-        transform-origin: 50% 0%;
-        animation: spin $speed+s infinite linear;
-
-        &.htmlPlane {
-          animation-delay: -($speed/2) + s;
-          &:after{
-            position: absolute;
-            content: url('./images/logo-html.png');
-          }
-        }
-        &.jsPlane {
-          animation-delay: -($speed/4) + s;
-          &:after{
-            position: absolute;
-            content: url('./images/logo-html.png');
-          }
-        }
-        &.cssPlane {
-          animation-delay: -($speed * 0.75) + s;
-          &:after{
-            position: absolute;
-            content: url('./images/logo-html.png');
-          }
-        }
-        &.reactPlane {
-          //animation-delay: -($speed/2) + s;
-          &:after{
-            position: absolute;
-            content: url('./images/logo-html.png');
-            height: 150px;
-            width: 150px;
-          }
-        }
-      }
-
-    }
   }
 }
 
