@@ -10,6 +10,11 @@ const BeautifulGirlVector = '../media/BeautifulGirlVector.jpg';
 const BirdFromCameraBlurrEffect = '../media/BirdFromCameraBlurrEffect.jpg';
 const DeadpoolHulk = '../media/DeadpoolHulk.jpg';
 const KakashiSenseiNaruto = '../media/KakashiSenseiNaruto.jpg';
+const HankokSketch = '../media/Hankok_Sketch.jpg';
+const BeachHouseKonkanPen = '../media/BeachHouse_Konkan_Pen.jpg';
+const BoatOceanReflection = '../media/Boat_Ocean_Reflection.jpg';
+const Ghost = '../media/Ghost.jpg';
+const GreedyFishRedBluepen = '../media/Greedy_Fish_Red_Blue_pen.jpg';
 
 /** Music Related Images*/
 const AbhiMuzMeKahi_Thumb = '../media/AbhiMuzMeKahin_Thumb.png';
@@ -220,6 +225,41 @@ var ImageGalleryView = React.createClass({
                 originalClass: 'featured-slide',
                 thumbnailClass: 'featured-thumb',
                 description: 'Ban the fox sin from Seven Deadly Sins(Anime)'
+            },
+            {
+                thumbnail: Ghost,
+                original: Ghost,
+                originalClass: 'featured-slide',
+                thumbnailClass: 'featured-thumb',
+                description: 'Ghost'
+            },
+            {
+                thumbnail: BeachHouseKonkanPen,
+                original: BeachHouseKonkanPen,
+                originalClass: 'featured-slide',
+                thumbnailClass: 'featured-thumb',
+                description: "A beach scene."
+            },
+            {
+                thumbnail: BoatOceanReflection,
+                original: BoatOceanReflection,
+                originalClass: 'featured-slide',
+                thumbnailClass: 'featured-thumb',
+                description: "Lonely Boat in the middle of the ocean and it's reflection."
+            },
+            {
+                thumbnail: GreedyFishRedBluepen,
+                original: GreedyFishRedBluepen,
+                originalClass: 'featured-slide',
+                thumbnailClass: 'featured-thumb',
+                description: 'Life is a unnecessary race.'
+            },
+            {
+                thumbnail: HankokSketch,
+                original: HankokSketch,
+                originalClass: 'featured-slide',
+                thumbnailClass: 'featured-thumb',
+                description: 'Hankok !!!'
             }
         ]);
     },

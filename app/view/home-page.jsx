@@ -55,7 +55,6 @@ var HomePageView = React.createClass({
                 </div>*/}
                 <div className="homeRightBlock pageRightBlock">
                     <div className="webContainer"></div>
-                    <div className="logoInsideWeb"></div>
                 </div>
             </div>);
     }
