@@ -35,7 +35,7 @@ var WorkPageView = React.createClass({
     getArtViewDom: function () {
         return (
             <div className="workInnerViewWrapper">
-                <div className="workButton artButton" onClick={this.handleWorkButtonClicked.bind(this, "buttonsView")}>Art</div>
+                <div className="workButton artButton" onClick={this.handleWorkButtonClicked.bind(this, "buttonsView")}>◀ Art</div>
                 <ImageGalleryView context={"art"}/>
             </div>)
     },
@@ -43,7 +43,7 @@ var WorkPageView = React.createClass({
     getMusicViewDom: function () {
         return (
             <div className="workInnerViewWrapper">
-                <div className="workButton musicButton" onClick={this.handleWorkButtonClicked.bind(this, "buttonsView")}>Music</div>
+                <div className="workButton musicButton" onClick={this.handleWorkButtonClicked.bind(this, "buttonsView")}>◀ Music</div>
                 <ImageGalleryView context={"music"}/>
             </div>)
     },

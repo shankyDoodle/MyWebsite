@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     sBasePath = '..',
     gulpWebpack = require('gulp-webpack'),
     webpack = require('webpack'),
+    uglify = require('gulp-uglify'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
     sourceFile = sBasePath + '/app/html/start.jsx',
     destFolder = sBasePath + '/appbuild',
@@ -41,8 +42,8 @@ function doWebpack(oProject, bProduction){
     return gulp.src(aFilesToCompile)
         .pipe(gulpWebpack(
             {
-                devtool: "#sourcemap",
-                debug: true,
+                // devtool: "#sourcemap",
+                // debug: true,
                 output: {
                     filename: sDestinationJSFile
                 },

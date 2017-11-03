@@ -144,7 +144,7 @@ var ApplicationController = React.createClass({
                 "detect_on": "window",
                 "events": {
                     "onhover": {
-                        "enable": true,
+                        "enable": false,
                         "mode": "grab"
                     },
                     "onclick": {
@@ -179,7 +179,7 @@ var ApplicationController = React.createClass({
                     }
                 }
             },
-            "retina_detect": true
+            "retina_detect": false
         };
         var sCurrentPageContext = this.getStore().getCurrentPageContext();
         var oCurrentPageView = this.getCurrentPageView(sCurrentPageContext);

@@ -15,6 +15,7 @@ const BeachHouseKonkanPen = '../media/BeachHouse_Konkan_Pen.jpg';
 const BoatOceanReflection = '../media/Boat_Ocean_Reflection.jpg';
 const Ghost = '../media/Ghost.jpg';
 const GreedyFishRedBluepen = '../media/Greedy_Fish_Red_Blue_pen.jpg';
+const PurushottamPrize = '../media/PurushottamPrize.jpg';
 
 /** Music Related Images*/
 const AbhiMuzMeKahi_Thumb = '../media/AbhiMuzMeKahin_Thumb.png';
@@ -260,6 +261,13 @@ var ImageGalleryView = React.createClass({
                 originalClass: 'featured-slide',
                 thumbnailClass: 'featured-thumb',
                 description: 'Hankok !!!'
+            },
+            {
+                thumbnail: PurushottamPrize,
+                original: PurushottamPrize,
+                originalClass: 'featured-slide',
+                thumbnailClass: 'featured-thumb',
+                description: '"Vakilya" - Acting Prize.'
             }
         ]);
     },
