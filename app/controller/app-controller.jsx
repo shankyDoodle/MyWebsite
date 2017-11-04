@@ -1,6 +1,7 @@
 var React = require("react");
 var _ = require('lodash');
 var Particles = require('react-particles-js').Particles;
+var ToastContainer = require('react-toastify').ToastContainer;
 
 var HomePage = require('../view/home-page').view;
 var AboutPage = require('../view/about-page').view;
@@ -202,6 +203,14 @@ var ApplicationController = React.createClass({
                     </div>
                     {oCurrentPageView}
                 </div>
+                <ToastContainer
+                    position="bottom-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    pauseOnHover
+                />
             </div>);
     }
 });

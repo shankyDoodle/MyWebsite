@@ -1,6 +1,7 @@
 var React = require("react");
 var _ = require('lodash');
 var $ = require("jquery");
+var ToastAlert = require('react-toastify').toast;
 
 var SkillPageView = React.createClass({
     propTypes: {
@@ -31,6 +32,14 @@ var SkillPageView = React.createClass({
             })) {
             console.log("something went wrong, hide the canvas container");
             $('#myCanvasContainer').hide();
+        }else {
+            setTimeout(function () {
+                ToastAlert("Scroll over the sphere for zoom effect.", {
+                    className: 'custom-dark-toast',
+                    progressClassName: 'custom-blue-progress',
+                    autoClose: 5000
+                });
+            }, 2000);
         }
     },
 

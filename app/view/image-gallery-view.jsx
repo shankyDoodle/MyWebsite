@@ -179,6 +179,13 @@ var ImageGalleryView = React.createClass({
     getItemListForArt: function () {
         return ([
             {
+                thumbnail: PurushottamPrize,
+                original: PurushottamPrize,
+                originalClass: 'featured-slide',
+                thumbnailClass: 'featured-thumb',
+                description: '"Vakilya" - Acting Prize.'
+            },
+            {
                 original: BirdFromCameraBlurrEffect,
                 thumbnail: BirdFromCameraBlurrEffect,
                 originalClass: 'featured-slide',
@@ -261,13 +268,6 @@ var ImageGalleryView = React.createClass({
                 originalClass: 'featured-slide',
                 thumbnailClass: 'featured-thumb',
                 description: 'Hankok !!!'
-            },
-            {
-                thumbnail: PurushottamPrize,
-                original: PurushottamPrize,
-                originalClass: 'featured-slide',
-                thumbnailClass: 'featured-thumb',
-                description: '"Vakilya" - Acting Prize.'
             }
         ]);
     },

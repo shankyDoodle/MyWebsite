@@ -7,69 +7,6 @@
   position: relative;
 
 
-  /*.contactLeftBlock {
-    width: 40%;
-    height: 100%;
-    float: left;
-
-    &.pageLeftBlock {
-      position: absolute;
-      left: 10%;
-      top: 60%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      width: 40%;
-      max-height: 80%;
-
-      .informationBlock {
-        position: relative;
-
-
-        .headerInformation {
-          &.shakeWithH1 {
-            font-size: 40px;
-            white-space: pre;
-            color: #08fdd8;
-            line-height: 40px;
-
-
-            &::after{
-              @include tagPseudoElement();
-              content: "</h1>";
-              bottom: -75px;
-              left: 0;
-            }
-          }
-        }
-
-        .bodyInformation {
-          width: 80%;
-          &.shakeWithH1 {
-            font-size: 15px;
-            line-height: 15px;
-            white-space: pre;
-
-            &::before {
-              display: none;
-            }
-
-            &::after {
-              display: none;
-            }
-
-            .character_shake {
-              &:hover {
-                color: #ffffff;
-              }
-            }
-          }
-        }
-      }
-    }
-
-  }*/
-
   .contactRightBlock {
     height: 100%;
     //width: 50%;
