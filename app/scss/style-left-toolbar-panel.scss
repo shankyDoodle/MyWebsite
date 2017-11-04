@@ -214,7 +214,7 @@
       height: 30px;
       width: 60px;
       background-position: center;
-      background-size: 17px;
+      background-size: 20px;
       background-repeat: no-repeat;
       transition: all ease .5s;
       cursor: pointer;
@@ -245,7 +245,6 @@
 
       &.instagram{
         background-image: url("./images/Instagram-48-Black.png");
-        background-size: 23px;
 
         &:hover{
           background-image: url("./images/Instagram-48-Blue.png");
