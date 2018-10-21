@@ -111,3 +111,5 @@ gulp.task('webpack', function () {
         return doWebpack(oProject, false);
     });
 });
+
+gulp.task( 'default', [ 'webpack' ] );
