@@ -26,6 +26,8 @@ const MainRahuYaNaRahu_Thumb = '../media/MainRahuYaNaRahu_Thumb.png';
 const MainRahuYaNaRahu_Tile = '../media/MainRahuYaNaRahu_Tile.jpg';
 const Titanic_Thumb = '../media/Titanic_Thumb.png';
 const Titanic_Tile = '../media/Titanic_Tile.jpg';
+const Malgudi_Thumb = '../media/Malgudi_Thumb.jpg';
+const Malgudi_Tile = '../media/Malgudi_Tile.jpg';
 
 var ImageGalleryView = React.createClass({
     propTypes: {},
@@ -308,6 +310,15 @@ var ImageGalleryView = React.createClass({
                 thumbnailClass: 'featured-thumb',
                 description: 'Titanic Flute Cover',
                 embedUrl: 'https://www.youtube.com/embed/oovLNLtk20Q',
+                renderItem: this._renderVideo.bind(this)
+            },
+            {
+                thumbnail: Malgudi_Thumb,
+                original: Malgudi_Tile,
+                originalClass: 'featured-slide',
+                thumbnailClass: 'featured-thumb',
+                description: 'Malgudi Days Theme Flute Cover',
+                embedUrl: 'https://www.youtube.com/embed/R_u1we4IWTY',
                 renderItem: this._renderVideo.bind(this)
             }
         ]);

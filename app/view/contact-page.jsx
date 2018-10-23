@@ -200,7 +200,7 @@ const StyledMapWithAnInfoBox = compose(
         loadingElement: <div style={{height: `100%`}}/>,
         containerElement: <div style={{height: `100%`}}/>,
         mapElement: <div style={{height: `100%`}}/>,
-        center: {lat: 18.5072, lng: 73.9237},
+        center: {lat: 42.08925 , lng: -75.96989},
     }),
     withScriptjs,
     withGoogleMap
@@ -221,7 +221,7 @@ const StyledMapWithAnInfoBox = compose(
          </div>
          </InfoBox>*/}
         <Marker
-            position={{lat: 18.5072, lng: 73.9237}}
+            position={{lat: 42.08925, lng: -75.96989}}
         />
     </GoogleMap>
 );
@@ -269,7 +269,7 @@ var ContactPageView = React.createClass({
                     <span className="mailIndicator">"Hi..."</span>
                     <span className="addressText">,</span>
                     <br/>
-                    <span className="addressText">then why not get in touch ?</span>
+                    <span className="addressText">then why not get in touch?</span>
                 </div>
             </div>
         );
@@ -279,7 +279,7 @@ var ContactPageView = React.createClass({
         return (
             <div className="getSendMeMailBlockContainer">
                 <div className="messageBlockContainer">
-                    <span className="addressText">Send me E-Mail...</span>
+                    <span className="addressText">Drop an E-Mail...</span>
                     <br/>
                     <br/>
                     <span className="mailIndicator">@ </span>
@@ -302,7 +302,7 @@ var ContactPageView = React.createClass({
                  </div>*/}
                 {this.getInTouchTextDOM()}
                 {this.getSendMeEmailDOM()}
-                {this.getAddressTextDOM()}
+                {/*{this.getAddressTextDOM()}*/}
                 <div className="contactRightBlock">
                     <StyledMapWithAnInfoBox />
                 </div>
