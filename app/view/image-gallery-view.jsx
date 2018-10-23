@@ -3,31 +3,31 @@ var _ = require('lodash');
 var ImageGallery = require('react-image-gallery').default;
 
 /** Art Related Images*/
-const CuteDreamGirlWithSpecs = '../media/CuteDreamGirlWithSpecs.jpg';
-const BanTheFox7DeadlySins = '../media/BanTheFox7DeadlySins.jpg';
-const BatmanInDark = '../media/BatmanInDark.jpg';
-const BeautifulGirlVector = '../media/BeautifulGirlVector.jpg';
-const BirdFromCameraBlurrEffect = '../media/BirdFromCameraBlurrEffect.jpg';
-const DeadpoolHulk = '../media/DeadpoolHulk.jpg';
-const KakashiSenseiNaruto = '../media/KakashiSenseiNaruto.jpg';
-const HankokSketch = '../media/Hankok_Sketch.jpg';
-const BeachHouseKonkanPen = '../media/BeachHouse_Konkan_Pen.jpg';
-const BoatOceanReflection = '../media/Boat_Ocean_Reflection.jpg';
-const Ghost = '../media/Ghost.jpg';
-const GreedyFishRedBluepen = '../media/Greedy_Fish_Red_Blue_pen.jpg';
-const PurushottamPrize = '../media/PurushottamPrize.jpg';
+const CuteDreamGirlWithSpecs = 'https://drive.google.com/uc?id=1_qPTB47HPjXrfeTSjsXI8B__ei71MLpr';
+const BanTheFox7DeadlySins = 'https://drive.google.com/uc?id=1g6tzyCbH5cXWM-bjepJ8I9P5ozdnL2Z7';
+const BatmanInDark = 'https://drive.google.com/uc?id=1PJ-reOCYsVaXytmhaUR_aZuk_-tAmLOY';
+const BeautifulGirlVector = 'https://drive.google.com/uc?id=1dGgucY0-rjoFTKMExg-t82sBaDM5VP0G';
+const BirdFromCameraBlurrEffect = 'https://drive.google.com/uc?id=1AX1DnMoQ25XtWJZsZYmFZRf5rlfmrFjE';
+const DeadpoolHulk = 'https://drive.google.com/uc?id=1OL0ODpI9jwu-avXPWKFLDhTd-QLSmX2I';
+const KakashiSenseiNaruto = 'https://drive.google.com/uc?id=1TdHg-AZsL0G9VlWj7JB3MZIFfYkr7V-_';
+const HankokSketch = 'https://drive.google.com/uc?id=174y-rK6Sl-fEhF3ZhnM4Zdusfggaa7q1';
+const BeachHouseKonkanPen = 'https://drive.google.com/uc?id=110uvRlO8w2gjHQtKDkNK4ozVY53QIlWl';
+const BoatOceanReflection = 'https://drive.google.com/uc?id=1rryg320VSFwQP7g1X9T1XZ0m8h27YQcr';
+const Ghost = 'https://drive.google.com/uc?id=19m0NrxALgnAVIGa_WhANaJEXa7O7wPEv';
+const GreedyFishRedBluepen = 'https://drive.google.com/uc?id=1TF5pnfxn2S_I1R95gLgio98bjRu8JpyZ';
+const PurushottamPrize = 'https://drive.google.com/uc?id=1ZU7PWhmlCu6L2QAExR77Bni9KWP79cXK';
 
 /** Music Related Images*/
-const AbhiMuzMeKahi_Thumb = '../media/AbhiMuzMeKahin_Thumb.png';
-const AbhiMuzMeKahi_Tile = '../media/AbhiMuzMeKahin_Tile.jpg';
-const KrishnaThemeMahabharata_Thumb = '../media/KrishnaThemeMahabharata_Thumb.png';
-const KrishnaThemeMahabharata_Tile = '../media/KrishnaThemeMahabharata_Tile.jpg';
-const MainRahuYaNaRahu_Thumb = '../media/MainRahuYaNaRahu_Thumb.png';
-const MainRahuYaNaRahu_Tile = '../media/MainRahuYaNaRahu_Tile.jpg';
-const Titanic_Thumb = '../media/Titanic_Thumb.png';
-const Titanic_Tile = '../media/Titanic_Tile.jpg';
-const Malgudi_Thumb = '../media/Malgudi_Thumb.jpg';
-const Malgudi_Tile = '../media/Malgudi_Tile.jpg';
+const AbhiMuzMeKahi_Thumb = 'https://drive.google.com/uc?id=1OGOQlOLahSwrq6GBYQNMHG7olIMoc2EM';
+const AbhiMuzMeKahi_Tile = 'https://drive.google.com/uc?id=1gbxURzw_xfyiCjx7bEo1x2-OqSCGD4K9';
+const KrishnaThemeMahabharata_Thumb = 'https://drive.google.com/uc?id=14akJLQKl_FRHSO9n1yBIos_qfu_T1Lm4';
+const KrishnaThemeMahabharata_Tile = 'https://drive.google.com/uc?id=1lC0aSGalJmj_XQwCdqG_9tHDrlwhDY9b';
+const MainRahuYaNaRahu_Thumb = 'https://drive.google.com/uc?id=1a6LFfgmtZp5Qwi963PvYytxzQwSgUVj9';
+const MainRahuYaNaRahu_Tile = 'https://drive.google.com/uc?id=1eDGpKj1WeXuEQA7Zs8tL-mCHpM48xQAG';
+const Titanic_Thumb = 'https://drive.google.com/uc?id=1H4Xj46YLlwE9BndGFqurqFbsMnSqtKtf';
+const Titanic_Tile = 'https://drive.google.com/uc?id=18-v3QDR2g8R3kGyOfoNxIcLpCUjgBXK4';
+const Malgudi_Thumb = 'https://drive.google.com/uc?id=1x9GxAWXIHNXovYfQi55WBG6xKx5nJcvk';
+const Malgudi_Tile = 'https://drive.google.com/uc?id=1oEDh_iK86sI5wqTL2MPcJNiIpUT-BTrX';
 
 var ImageGalleryView = React.createClass({
     propTypes: {},
