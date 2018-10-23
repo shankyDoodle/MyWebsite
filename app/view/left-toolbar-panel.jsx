@@ -60,16 +60,17 @@ var HeaderInformationView = React.createClass({
                 </div>
 
                 <div className="socialMediaIconContainer">
-                    <div className="mediaIcon facebook"
-                         onClick={this.handleSocialMediaIconClicked.bind(this, "facebook")}></div>
                     <div className="mediaIcon linkedIn"
                          onClick={this.handleSocialMediaIconClicked.bind(this, "linkedIn")}></div>
-                    <div className="mediaIcon twitter"
-                         onClick={this.handleSocialMediaIconClicked.bind(this, "twitter")}></div>
-                    {/*<div className="mediaIcon instagram"
-                         onClick={this.handleSocialMediaIconClicked.bind(this, "instagram")}></div>*/}
                     <div className="mediaIcon github"
                          onClick={this.handleSocialMediaIconClicked.bind(this, "github")}></div>
+                    <div className="mediaIcon twitter"
+                         onClick={this.handleSocialMediaIconClicked.bind(this, "twitter")}></div>
+                    <div className="mediaIcon facebook"
+                         onClick={this.handleSocialMediaIconClicked.bind(this, "facebook")}></div>
+                    {/*<div className="mediaIcon instagram"
+                         onClick={this.handleSocialMediaIconClicked.bind(this, "instagram")}></div>*/}
+
                 </div>
             </div>);
     }
