@@ -20,16 +20,19 @@ var HeaderInformationView = React.createClass({
         var sUrl = "";
         switch (sButtonContext){
             case "facebook":
-                sUrl = "https://www.facebook.com/shashank.kaldate";
+                sUrl = "https://www.facebook.com/shankyDoodle4";
                 break;
             case "linkedIn":
-                sUrl = "https://www.linkedin.com/in/shashank-kaldate-23b6a689/";
+                sUrl = "https://www.linkedin.com/in/shashank-k-23b6a689/";
                 break;
             case "twitter":
                 sUrl = "https://twitter.com/shanky4k";
                 break;
             case "instagram":
                 sUrl = "https://www.instagram.com/shanky.doodle/?hl=en";
+                break;
+          case "github":
+                sUrl = "https://github.com/shankyDoodle";
                 break;
         }
 
@@ -63,8 +66,10 @@ var HeaderInformationView = React.createClass({
                          onClick={this.handleSocialMediaIconClicked.bind(this, "linkedIn")}></div>
                     <div className="mediaIcon twitter"
                          onClick={this.handleSocialMediaIconClicked.bind(this, "twitter")}></div>
-                    <div className="mediaIcon instagram"
-                         onClick={this.handleSocialMediaIconClicked.bind(this, "instagram")}></div>
+                    {/*<div className="mediaIcon instagram"
+                         onClick={this.handleSocialMediaIconClicked.bind(this, "instagram")}></div>*/}
+                    <div className="mediaIcon github"
+                         onClick={this.handleSocialMediaIconClicked.bind(this, "github")}></div>
                 </div>
             </div>);
     }

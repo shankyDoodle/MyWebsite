@@ -27,7 +27,7 @@ var AboutPageView = React.createClass({
     },
 
     getBodyText: function () {
-        var sPara1 = "Since past 2 years I am specialising in front-end development -HTML/CSS/JS, React.Js.",
+        var sPara1 = "Since past 3 years, I am specializing in front-end development -HTML/CSS/JS, React.Js and server-side scripting in Node.js.",
             sPara2 = "But I also get my hands dirty on back-end development on rare occasions in JAVA and database technologies.",
             sPara3 = "I am an art enthusiast as well, like to participate in every art form - Music, Drawing, Dance, Acting.";
 

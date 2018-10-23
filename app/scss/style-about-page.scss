@@ -44,6 +44,12 @@ $speed: 5;
 
   .aboutRightBlock {
 
+    .container{
+      transform: translateY(-50%);
+      position: absolute;
+      left: 10%;
+      top: 50%;
+    }
   }
 }
 

@@ -250,6 +250,14 @@
           background-image: url("./images/Instagram-48-Blue.png");
         }
       }
+
+      &.github{
+        background-image: url("./images/Github-filled-50-black.png");
+
+        &:hover{
+          background-image: url("./images/Github-filled-50-blue.png");
+        }
+      }
     }
   }
 }
