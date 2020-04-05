@@ -37,6 +37,15 @@
     line-height: 60px;
     font-size: 25px;
     cursor: pointer;
+    opacity: 0.7;
+
+    &.showOnly{
+      transition: all .65s;
+      &:hover{
+        opacity: 1;
+        transform: scale(1.09);
+      }
+    }
 
     &.technologyButton{
       font-family: -webkit-pictograph;

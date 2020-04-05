@@ -67,7 +67,7 @@ var SkillPageView = React.createClass({
         var sPara2 = "I worked at Contentserv for 3 years, where I joined the firm as 'Jr. Software Developer' and " +
             "left it as 'Sr. Software Developer Team Lead'. Before that I had short experience as 'a Project Intern' at firm known as Soft Corner in India."
         var sPara3 = "And as a Master's student I am working as a Research Assistant on a Computer Architecture & Organisation " +
-            "project from last 1.5 years, in which we are trying to keep Moore's law alive"
+            "project from last 1.5 years, in which we are trying to keep Moore's law alive."
 
         var oPara1DOM = (<div className="paraWrapper">{this.getWordSeparatedDomArray(sPara1)}</div>);
         var oPara2DOM = (<div className="paraWrapper">{this.getWordSeparatedDomArray(sPara2)}</div>);

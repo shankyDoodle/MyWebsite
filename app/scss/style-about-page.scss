@@ -38,6 +38,38 @@ $speed: 5;
             }
           }
         }
+
+        .resumeBlock{
+          width: 100%;
+          float: left;
+          margin-top: 5%;
+
+          .workButton{
+            float: left;
+            height: 45px;
+            width: auto;
+            min-width: 100px;
+            border: 1px solid #08fdd8;
+            margin: 0 5px;
+            border-radius: 5px;
+            color: #08fdd8;
+            text-align: center;
+            padding: 0 10px;
+            line-height: 45px;
+            font-size: 19px;
+            cursor: pointer;
+            opacity: .7;
+            transition: all .65s;
+
+            &:hover{
+              //background: #08fdd8;
+              //color: #4c4c4c;
+              opacity: 1;
+              transform: scale(1.09);
+            }
+          }
+        }
+
       }
     }
   }

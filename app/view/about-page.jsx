@@ -51,6 +51,10 @@ var AboutPageView = React.createClass({
             </div>);
     },
 
+    handleResumeButtonClicked: function(){
+        window.open("https://drive.google.com/file/d/1CIhV1Vpq0y3TxMh9mWwYMrggeKj2Py-e/view")
+    },
+
     render: function () {
         return (
             <div className="aboutPageContainer">
@@ -62,6 +66,10 @@ var AboutPageView = React.createClass({
                         <div className="bodyInformation shakeWithH1">
                             {this.getBodyText()}
                         </div>
+                        <div className="resumeBlock">
+                            <div className="workButton " onClick={this.handleResumeButtonClicked.bind(this)}>Resume</div>
+                        </div>
+
                     </div>
                 </div>
                 <div className="aboutRightBlock pageRightBlock">

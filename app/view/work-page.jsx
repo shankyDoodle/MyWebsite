@@ -20,13 +20,13 @@ var WorkPageView = React.createClass({
 
     getButtonsDom: function () {
         return <div className="buttonsContainer">
-            <div className="workButton technologyButton"
+            <div className="workButton showOnly technologyButton"
                  onClick={this.handleWorkButtonClicked.bind(this, "technologyView")}>Projects
             </div>
-            <div className="workButton artButton"
+            <div className="workButton showOnly artButton"
                  onClick={this.handleWorkButtonClicked.bind(this, "artView")}>Art
             </div>
-            <div className="workButton musicButton"
+            <div className="workButton showOnly musicButton"
                  onClick={this.handleWorkButtonClicked.bind(this, "musicView")}>Music
             </div>
         </div>
