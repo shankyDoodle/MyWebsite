@@ -63,8 +63,17 @@ var SkillPageView = React.createClass({
 
     getBodyText: function () {
         var sPara1 = "The scope of my work is a large part of front end: " +
-            "HTML, CSS, JS, coding layouts, single page applications with ReactJs."
-        return this.getWordSeparatedDomArray(sPara1);
+            "HTML, CSS, JS, coding layouts, single page applications with ReactJs.";
+        var sPara2 = "I worked at Contentserv for 3 years, where I joined the firm as 'Jr. Software Developer' and " +
+            "left it as 'Sr. Software Developer Team Lead'. Before that I had short experience as 'a Project Intern' at firm known as Soft Corner in India."
+        var sPara3 = "And as a Master's student I am working as a Research Assistant on a Computer Architecture & Organisation " +
+            "project from last 1.5 years, in which we are trying to keep Moore's law alive"
+
+        var oPara1DOM = (<div className="paraWrapper">{this.getWordSeparatedDomArray(sPara1)}</div>);
+        var oPara2DOM = (<div className="paraWrapper">{this.getWordSeparatedDomArray(sPara2)}</div>);
+        var oPara3DOM = (<div className="paraWrapper">{this.getWordSeparatedDomArray(sPara3)}</div>);
+
+        return [oPara1DOM, oPara2DOM, oPara3DOM];
     },
 
     getTagCanvasView: function () {
@@ -73,7 +82,7 @@ var SkillPageView = React.createClass({
                 <canvas width="500" height="500" id="myCanvas">
                     <ul>
                         <li><a href="/HTML">HTML5</a></li>
-                        <li><a href="/fish">CSS3</a></li>
+                        <li><a href="/fish">CSS</a></li>
                         <li><a href="/chips">JavaScript</a></li>
                         <li><a href="/salt">JAVA</a></li>
                         <li><a href="/vinegar">C</a></li>
@@ -82,7 +91,7 @@ var SkillPageView = React.createClass({
                         <li><a href="/vinegar">Node.Js</a></li>
                         <li><a href="/vinegar">jQuery</a></li>
                         <li><a href="/vinegar">Ajax</a></li>
-                        <li><a href="/vinegar">VB</a></li>
+                        <li><a href="/vinegar">Python</a></li>
                         <li><a href="/vinegar">Art</a></li>
                         <li><a href="/vinegar">Sketch</a></li>
                         <li><a href="/vinegar">Flute</a></li>
@@ -90,7 +99,6 @@ var SkillPageView = React.createClass({
                         <li><a href="/vinegar">SASS</a></li>
                         <li><a href="/vinegar">JSON</a></li>
                         <li><a href="/vinegar">npm</a></li>
-                        <li><a href="/vinegar">Gulp</a></li>
                         <li><a href="/vinegar">REST</a></li>
                     </ul>
                 </canvas>

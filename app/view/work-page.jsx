@@ -20,9 +20,9 @@ var WorkPageView = React.createClass({
 
     getButtonsDom: function () {
         return <div className="buttonsContainer">
-            {/*<div className="workButton technologyButton"
-                 onClick={this.handleWorkButtonClicked.bind(this, "technologyView")}>Technology
-            </div>*/}
+            <div className="workButton technologyButton"
+                 onClick={this.handleWorkButtonClicked.bind(this, "technologyView")}>Projects
+            </div>
             <div className="workButton artButton"
                  onClick={this.handleWorkButtonClicked.bind(this, "artView")}>Art
             </div>
@@ -48,6 +48,10 @@ var WorkPageView = React.createClass({
             </div>)
     },
 
+    redirectToProjectsPage: function(){
+        window.open("https://shankydoodle.github.io/projects-page/");
+    },
+
     render: function () {
         var oViewToRender = null;
         var sCurrentStateContext = this.state.viewContext;
@@ -56,6 +60,8 @@ var WorkPageView = React.createClass({
                 oViewToRender = this.getButtonsDom();
                 break;
             case "technologyView":
+                this.redirectToProjectsPage();
+                oViewToRender = this.getButtonsDom();
                 break;
             case "artView":
                 oViewToRender = this.getArtViewDom();

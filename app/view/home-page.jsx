@@ -48,7 +48,7 @@ var HomePageView = React.createClass({
                     <div className="introductorySection shakeWithH1">
                         {this.getTextArea()}
                     </div>
-                    <div className="introductorySectionBottom">Front End Developer | React JS | Artist</div>
+                    <div className="introductorySectionBottom">Front-End | Full Stack | Artist</div>
                 </div>
                 {/*<div className="homeRightBlock spider pageRightBlock">
                     {this.getSpiderView()}
