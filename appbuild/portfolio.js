@@ -57029,6 +57029,18 @@
 	        );
 	    },
 
+	    getTimelineView: function () {
+
+	        return React.createElement(
+	            "div",
+	            { className: "timelineWrapper" },
+	            React.createElement("div", { className: "intern" }),
+	            React.createElement("div", { className: "contentserv" }),
+	            React.createElement("div", { className: "nowork" }),
+	            React.createElement("div", { className: "sunyrf" })
+	        );
+	    },
+
 	    render: function () {
 	        return React.createElement(
 	            "div",
@@ -57049,6 +57061,11 @@
 	                        { className: "bodyInformation shakeWithH1" },
 	                        this.getBodyText()
 	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "workexTimeline" },
+	                    this.getTimelineView()
 	                )
 	            ),
 	            React.createElement(

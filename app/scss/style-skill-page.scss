@@ -38,6 +38,47 @@
         }
       }
     }
+
+    .workexTimeline{
+      float: left;
+      width: 50%;
+
+      margin-top: 10%;
+
+
+      .timelineWrapper{
+        border-bottom: 3px solid #808080;
+        width: 100%;
+        height: 100%;
+
+        .intern{
+          height: 5px;
+          float: left;
+          width: 17%;
+          background: #dd0a49;
+        }
+        .contentserv{
+          height: 5px;
+          float: left;
+          width: 51%;
+          background: #d26cd5;
+        }
+        .nowork{
+          height: 5px;
+          float: left;
+          width: 9%;
+          background: #383838;
+        }
+        .sunyrf{
+          height: 5px;
+          float: left;
+          width: 23%;
+          background: #03fdd9;
+        }
+
+
+      }
+    }
   }
 
   .skillRightBlock{

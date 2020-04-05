@@ -97,6 +97,18 @@ var SkillPageView = React.createClass({
             </div>);
     },
 
+    getTimelineView: function () {
+
+        return (
+            <div className={"timelineWrapper"}>
+                <div className={"intern"}></div>
+                <div className={"contentserv"}></div>
+                <div className={"nowork"}></div>
+                <div className={"sunyrf"}></div>
+            </div>
+        );
+    },
+
     render: function () {
         return (
             <div className="skillPageContainer">
@@ -109,6 +121,9 @@ var SkillPageView = React.createClass({
                         <div className="bodyInformation shakeWithH1">
                             {this.getBodyText()}
                         </div>
+                    </div>
+                    <div className={"workexTimeline"}>
+                        {this.getTimelineView()}
                     </div>
                 </div>
                 <div className="skillRightBlock pageRightBlock">
