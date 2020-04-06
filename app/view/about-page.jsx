@@ -29,7 +29,7 @@ var AboutPageView = React.createClass({
     getBodyText: function () {
         var sPara1 = "I am a Software Developer and an Art enthusiast who has competence in various art forms. So having technical " +
                 "comprehension and artistic vision, I am working towards making the web more beautiful by amalgamating both of these.";
-        var sPara2 = "Since past 5 years, I am specializing in front-end development -HTML/CSS/JS, React.Js and server-side scripting in Node.js.";
+        var sPara2 = "For the past 5 years, I am specializing in front-end development -HTML/CSS/JS, React.Js and server-side scripting in Node.js.";
         var sPara3 = "But I also get my hands dirty on back-end development in JAVA, Python and database technologies, along with working in core computer science technologies.";
 
         var oPara1DOM = (<div className="paraWrapper">{this.getWordSeparatedDomArray(sPara1)}</div>);

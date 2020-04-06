@@ -56652,7 +56652,7 @@
 
 	    getBodyText: function () {
 	        var sPara1 = "I am a Software Developer and an Art enthusiast who has competence in various art forms. So having technical " + "comprehension and artistic vision, I am working towards making the web more beautiful by amalgamating both of these.";
-	        var sPara2 = "Since past 5 years, I am specializing in front-end development -HTML/CSS/JS, React.Js and server-side scripting in Node.js.";
+	        var sPara2 = "For the past 5 years, I am specializing in front-end development -HTML/CSS/JS, React.Js and server-side scripting in Node.js.";
 	        var sPara3 = "But I also get my hands dirty on back-end development in JAVA, Python and database technologies, along with working in core computer science technologies.";
 
 	        var oPara1DOM = React.createElement(
@@ -56843,9 +56843,9 @@
 	    },
 
 	    getBodyText: function () {
-	        var sPara1 = "The scope of my work is a large part of front end: " + "HTML, CSS, JS, coding layouts, single page applications with ReactJs.";
-	        var sPara2 = "I worked at Contentserv for 3 years, where I joined the firm as 'Jr. Software Developer' and " + "left it as 'Sr. Software Developer Team Lead'. Before that I had short experience as 'a Project Intern' at firm known as Soft Corner in India.";
-	        var sPara3 = "And as a Master's student I am working as a Research Assistant on a Computer Architecture & Organisation " + "project from last 1.5 years, in which we are trying to keep Moore's law alive.";
+	        var sPara1 = "The scope of my work is a large part of the front end: HTML, CSS, JS, coding layouts, single-page applications with ReactJs.";
+	        var sPara2 = "I worked at 'Contentserv' for 3 years, where I joined the firm as 'Jr. Software Developer' and left it as " + "'Sr. Software Developer Team Lead'. Before that, I had a short experience as 'a Project Intern' at a firm known as Soft Corner in India.";
+	        var sPara3 = "And as a Master's student, I am working as a Research Assistant at 'The Research Foundation for SUNY' on a " + "Computer Architecture & Organisation project from the last 1.5 years, in which we are trying to keep Moore's law alive.";
 
 	        var oPara1DOM = React.createElement(
 	            "div",
@@ -57084,11 +57084,6 @@
 	                        { className: "bodyInformation shakeWithH1" },
 	                        this.getBodyText()
 	                    )
-	                ),
-	                React.createElement(
-	                    "div",
-	                    { className: "workexTimeline" },
-	                    this.getTimelineView()
 	                )
 	            ),
 	            React.createElement(
