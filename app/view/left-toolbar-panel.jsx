@@ -23,7 +23,7 @@ var HeaderInformationView = React.createClass({
                 sUrl = "https://www.facebook.com/shankyDoodle4";
                 break;
             case "linkedIn":
-                sUrl = "https://www.linkedin.com/in/shashank-k-23b6a689/";
+                sUrl = "https://www.linkedin.com/in/shashank-kaldate-23b6a689/";
                 break;
             case "twitter":
                 sUrl = "https://twitter.com/shanky4k";
