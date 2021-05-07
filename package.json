@@ -2,7 +2,7 @@
   "dependencies": {
     "bootstrap": "3.3.7",
     "jquery": "2.1.4",
-    "lodash": "4.17.4",
+    "lodash": "4.17.21",
     "natives": "^1.1.6",
     "react": "15.6.1",
     "react-addons-css-transition-group": "*",
